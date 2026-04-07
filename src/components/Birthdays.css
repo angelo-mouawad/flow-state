@@ -1,0 +1,70 @@
+.birthday-input-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.birthday-list { display: flex; flex-direction: column; gap: 10px; }
+
+.birthday-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.18s;
+}
+
+.birthday-card:hover { border-color: var(--text3); }
+
+.birthday-card.today {
+  border-color: rgba(201,169,110,0.4);
+  background: rgba(201,169,110,0.06);
+}
+
+.birthday-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #0d0d0f;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.birthday-info { flex: 1; }
+
+.birthday-name { font-size: 15px; font-weight: 500; color: var(--text); }
+
+.birthday-date { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+.birthday-countdown {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 500;
+  text-align: right;
+  min-width: 80px;
+}
+
+.birthday-countdown.today { color: var(--accent); font-size: 13px; }
+.birthday-countdown.soon { color: var(--success); }
+
+.btn-delete-b {
+  opacity: 0;
+  background: transparent;
+  color: var(--text3);
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.birthday-card:hover .btn-delete-b { opacity: 1; }
+.btn-delete-b:hover { color: var(--danger); }

@@ -1,0 +1,143 @@
+.progress-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.progress-bar-track {
+  flex: 1;
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.progress-pct {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  min-width: 32px;
+}
+
+.todo-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.filter-btn.active {
+  background: rgba(201,169,110,0.12);
+  color: var(--accent);
+  border-color: rgba(201,169,110,0.3);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  animation: slideIn 0.25s ease both;
+  transition: border-color 0.18s, opacity 0.25s;
+}
+
+.todo-item:hover {
+  border-color: var(--text3);
+}
+
+.todo-item.done {
+  opacity: 0.5;
+}
+
+.check-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.18s;
+  cursor: pointer;
+}
+
+.check-btn:hover {
+  border-color: var(--accent);
+}
+
+.check-btn.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+  animation: checkPop 0.3s ease;
+}
+
+.check-mark {
+  color: #0d0d0f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  transition: color 0.18s;
+}
+
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: var(--text3);
+}
+
+.btn-delete {
+  opacity: 0;
+  background: transparent;
+  color: var(--text3);
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.todo-item:hover .btn-delete {
+  opacity: 1;
+}
+
+.btn-delete:hover {
+  color: var(--danger);
+}

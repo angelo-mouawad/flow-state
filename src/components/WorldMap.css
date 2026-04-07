@@ -1,0 +1,68 @@
+.map-hint {
+  font-size: 12px;
+  color: var(--text3);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+
+.map-svg-wrap {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.country-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.country-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.country-chip:hover {
+  color: var(--text);
+  border-color: var(--text3);
+}
+
+.country-chip.visited {
+  background: rgba(201,169,110,0.12);
+  color: var(--accent);
+  border-color: rgba(201,169,110,0.3);
+  font-weight: 500;
+}
+
+.map-tooltip {
+  position: absolute;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}

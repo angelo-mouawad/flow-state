@@ -1,0 +1,123 @@
+.day-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.day-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.day-tab:hover { color: var(--text); border-color: var(--text3); }
+
+.day-tab.active {
+  background: rgba(201,169,110,0.1);
+  color: var(--accent);
+  border-color: rgba(201,169,110,0.3);
+}
+
+.day-short { font-size: 13px; font-weight: 600; }
+.day-dot { font-size: 6px; color: var(--accent); }
+
+.edit-panel { margin-bottom: 0; }
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text2);
+}
+
+.exercise-grid-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr 40px;
+  gap: 8px;
+  padding: 0 4px 8px;
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.exercise-edit-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr 40px;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exercise-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.18s;
+}
+
+.exercise-card:hover { border-color: var(--text3); }
+
+.exercise-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.exercise-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 6px 12px;
+  min-width: 50px;
+}
+
+.stat-val {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-lbl {
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
