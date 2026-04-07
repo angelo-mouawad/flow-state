@@ -1,6 +1,6 @@
 {
   "name": "flow-state",
-  "homepage": "https://angelo-mouawad.github.io/flow-state",
+  "homepage": "https://YOUR-USERNAME.github.io/flow-state",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -16,19 +16,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^5.0.0"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
