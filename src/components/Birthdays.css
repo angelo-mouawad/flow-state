@@ -68,3 +68,22 @@
 
 .birthday-card:hover .btn-delete-b { opacity: 1; }
 .btn-delete-b:hover { color: var(--danger); }
+
+@media (max-width: 768px) {
+  .birthday-input-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .birthday-input-grid .input-field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .birthday-input-grid button {
+    grid-column: 1 / -1;
+  }
+
+  .btn-delete-b {
+    opacity: 1;
+  }
+}

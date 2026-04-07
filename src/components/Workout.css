@@ -111,7 +111,7 @@
   font-size: 15px;
   font-weight: 600;
   color: var(--accent);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Sora', sans-serif;
 }
 
 .stat-lbl {
@@ -120,4 +120,45 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 1px;
+}
+
+@media (max-width: 768px) {
+  .exercise-grid-header { display: none; }
+
+  .exercise-edit-row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px;
+    background: var(--bg3);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+  }
+
+  .exercise-edit-row .input-field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .exercise-edit-row button {
+    grid-column: 1 / -1;
+    justify-self: end;
+    width: auto;
+  }
+
+  .exercise-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .exercise-stats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .stat-chip {
+    flex: 1;
+    min-width: unset;
+  }
 }

@@ -1,9 +1,13 @@
+/* ── Reset & Shell ── */
 .app-shell {
   display: flex;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
-/* ── Sidebar ── */
+/* ═══════════════════════════════
+   DESKTOP SIDEBAR
+═══════════════════════════════ */
 .sidebar {
   width: 220px;
   min-height: 100vh;
@@ -14,21 +18,13 @@
   padding: 28px 16px;
   position: fixed;
   top: 0; left: 0; bottom: 0;
+  z-index: 100;
 }
 
 .sidebar-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   padding: 0 8px 28px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 20px;
-}
-
-.brand-icon {
-  font-size: 26px;
-  color: var(--accent);
-  line-height: 1;
 }
 
 .brand-name {
@@ -43,7 +39,7 @@
   font-size: 11px;
   color: var(--text3);
   letter-spacing: 0.04em;
-  margin-top: 1px;
+  margin-top: 3px;
 }
 
 .sidebar-nav {
@@ -66,6 +62,7 @@
   letter-spacing: 0.02em;
   transition: all 0.18s ease;
   text-align: left;
+  border: 1px solid transparent;
 }
 
 .nav-item:hover {
@@ -76,14 +73,21 @@
 .nav-item.active {
   background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(201,169,110,0.05));
   color: var(--accent);
-  border: 1px solid rgba(201,169,110,0.2);
+  border-color: rgba(201,169,110,0.2);
 }
 
 .nav-icon {
-  font-size: 15px;
   width: 18px;
-  text-align: center;
+  height: 18px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .sidebar-footer {
@@ -93,7 +97,9 @@
   letter-spacing: 0.03em;
 }
 
-/* ── Main Content ── */
+/* ═══════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════ */
 .main-content {
   margin-left: 220px;
   flex: 1;
@@ -101,18 +107,31 @@
   min-height: 100vh;
 }
 
+.mobile-header {
+  display: none;
+}
+
 .section-wrapper {
   max-width: 860px;
   margin: 0 auto;
 }
 
-/* ── Shared Section Styles ── */
+/* ═══════════════════════════════
+   BOTTOM NAV (mobile only)
+═══════════════════════════════ */
+.bottom-nav {
+  display: none;
+}
+
+/* ═══════════════════════════════
+   SHARED COMPONENT STYLES
+═══════════════════════════════ */
 .section-header {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -143,10 +162,11 @@
   background: var(--bg3);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 10px 14px;
+  padding: 11px 14px;
   color: var(--text);
   font-size: 14px;
   transition: border-color 0.18s;
+  min-width: 0;
 }
 
 .input-field:focus {
@@ -158,12 +178,14 @@
 }
 
 .btn {
-  padding: 10px 18px;
+  padding: 11px 18px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 500;
   transition: all 0.18s ease;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -173,7 +195,6 @@
 
 .btn-primary:hover {
   background: var(--accent2);
-  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -213,10 +234,146 @@
   opacity: 0.4;
 }
 
+.progress-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.progress-bar-track {
+  flex: 1;
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.progress-pct {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  min-width: 32px;
+}
+
+.btn-delete {
+  opacity: 0;
+  background: transparent;
+  color: var(--text3);
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* On mobile always show delete buttons (no hover) */
+@media (hover: none) {
+  .btn-delete { opacity: 1; }
+}
+
+/* ═══════════════════════════════
+   MOBILE STYLES
+═══════════════════════════════ */
 @media (max-width: 768px) {
-  .sidebar { width: 60px; padding: 20px 8px; }
-  .brand-name, .brand-sub, .nav-label, .sidebar-footer { display: none; }
-  .sidebar-brand { justify-content: center; padding-bottom: 20px; }
-  .main-content { margin-left: 60px; padding: 24px 20px; }
-  .nav-item { justify-content: center; padding: 12px; }
+  .sidebar { display: none; }
+
+  .main-content {
+    margin-left: 0;
+    padding: 0 0 80px 0;
+    min-height: 100dvh;
+  }
+
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 12px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .mobile-brand {
+    font-family: 'Sora', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+
+  .mobile-date {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .section-wrapper {
+    padding: 20px 16px;
+  }
+
+  .section-title { font-size: 24px; }
+
+  .card { padding: 16px; }
+
+  /* Bottom nav */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 10px 4px;
+    background: transparent;
+    color: var(--text3);
+    border: none;
+    cursor: pointer;
+    transition: color 0.18s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--accent);
+  }
+
+  .bottom-nav-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-nav-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+  }
+
+  .bottom-nav-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
 }

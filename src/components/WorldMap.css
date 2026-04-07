@@ -66,3 +66,8 @@
   white-space: nowrap;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
+
+@media (max-width: 768px) {
+  .map-visual.card { padding: 12px; }
+  .country-grid { max-height: 220px; }
+}

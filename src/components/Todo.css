@@ -141,3 +141,7 @@
 .btn-delete:hover {
   color: var(--danger);
 }
+
+@media (max-width: 768px) {
+  .btn-delete { opacity: 1; }
+}
