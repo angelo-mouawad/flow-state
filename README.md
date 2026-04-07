@@ -1,6 +1,6 @@
 # 🌊 Flow State
 
-> Your personal daily companion — built with React, lives in your browser.
+> Your personal daily companion built with React.
 
 Flow State is a beautifully designed personal productivity app with six sections to help you manage your day, track your fitness, remember birthdays, plan your calendar, explore the world, and dream big.
 
