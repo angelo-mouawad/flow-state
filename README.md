@@ -21,10 +21,9 @@ Flow State is a beautifully designed personal productivity app with six sections
 
 ## 🛠 Tech Stack
 
-- **React 18** — UI framework
-- **localStorage** — persistent data storage (no backend needed)
-- **CSS Variables** — consistent dark theme throughout
-- **Google Fonts** — Playfair Display + DM Sans
-- **SVG** — custom interactive world map
+- **React 18**: UI framework
+- **CSS Variables**: Consistent dark theme throughout
+- **Google Fonts**: Playfair Display + DM Sans
+- **SVG**: Custom interactive world map
 
 ---
