@@ -10,12 +10,12 @@ Flow State is a beautifully designed personal productivity app with six sections
 
 | Section | Description |
 |---|---|
-| **✦ Tasks** | To-do list with satisfying check animations, progress bar, and active/done filters |
-| **◈ Workout** | Weekly workout planner with sets, reps & weights per exercise, fully editable |
-| **◎ Birthdays** | Save birthdays and see live countdowns to who's coming up next |
-| **▦ Calendar** | Monthly calendar with colour-coded custom events, birthdays appear automatically |
-| **◉ World Map** | Interactive map to tick off every country you've visited |
-| **◇ Bucket List** | Dream list with categories like Travel, Adventure, Career, and Personal |
+| ** Tasks** | To-do list with satisfying check animations, progress bar, and active/done filters |
+| ** Workout** | Weekly workout planner with sets, reps & weights per exercise, fully editable |
+| ** Birthdays** | Save birthdays and see live countdowns to who's coming up next |
+| ** Calendar** | Monthly calendar with colour-coded custom events, birthdays appear automatically |
+| ** World Map** | Interactive map to tick off every country you've visited |
+| ** Bucket List** | Dream list with categories like Travel, Adventure, Career, and Personal |
 
 ---
 
