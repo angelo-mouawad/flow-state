@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flow-state/static/css/main.cd3cead0.css",
+    "main.js": "/flow-state/static/js/main.0e0d93df.js",
+    "index.html": "/flow-state/index.html",
+    "main.cd3cead0.css.map": "/flow-state/static/css/main.cd3cead0.css.map",
+    "main.0e0d93df.js.map": "/flow-state/static/js/main.0e0d93df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd3cead0.css",
+    "static/js/main.0e0d93df.js"
+  ]
+}
